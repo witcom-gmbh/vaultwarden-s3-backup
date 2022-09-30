@@ -37,6 +37,7 @@ ADD lifecycle.json.tmpl lifecycle.json.tmpl
 ADD run.sh run.sh
 ADD includes.sh includes.sh
 ADD backup.sh backup.sh
+ADD restore.sh restore.sh
 
 USER cloudbackup
 

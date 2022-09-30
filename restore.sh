@@ -30,6 +30,8 @@ function restore_backup() {
     BACKUP_FILE_DB="${BACKUP_DIR}/db.sqlite3"
     if [[ -f "${BACKUP_FILE_DB}" ]]; then
       echo "Restoring database"
+      #remove old stuff, including wal-files, etc.
+      rm -f ${DATA_DB}*
       cp -f ${BACKUP_FILE_DB} ${DATA_DB}
     fi
 
